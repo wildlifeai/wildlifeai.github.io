@@ -21,11 +21,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex
 
-      - name: Generate combined PDF
+      - name: Convert Markdown to PDF (ignoring images)
         run: |
-          cd docs
-          pandoc pages/*.md -o user-guide.pdf --toc --metadata title="User Guide" --pdf-engine=xelatex --no-fetch-remote-resources
-
+          pandoc docs/*.md \
+            --lua-filter=ignore-images.lua \
+            --pdf-engine=xelatex \
+            --toc \
+            -o user-guide.pdf
 
       - name: Commit PDF to repository
         run: |
