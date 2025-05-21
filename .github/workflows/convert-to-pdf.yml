@@ -1,38 +1,35 @@
-# .github/workflows/convert-to-pdf.yml
-
 name: docs-to-pdf
-# This workflow is triggered on pushes to the repository.
-run-name: ${{ github.actor }} is building a PDF 🚀
+
 on:
   push:
-    branches:
-      - main
-    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    branches: [ "main" ]
     paths:
-      - 'docs/**.md'
-      - 'docs/pages/**.md'
-      - 'docs/images/**'
+      - 'docs/**/*.md'
+      - '.github/workflows/convert-to-pdf.yml'
 
 jobs:
-  converttopdf:
-    name: Build PDF
+  build-pdf:
+    name: Build & Commit PDF
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - uses: actions/checkout@v3
-      - uses: baileyJM02/markdown-to-pdf@v1
-        with:
-          input_dir: docs
-          output_dir: pdfs
-          images_dir: docs/images
-          # for example <img src="./images/file-name.png">
-          image_import: ./images
-          # Default is true, can set to false to only get PDF files
-          build_html: false
-          # table_of_contents: value
-      - uses: actions/upload-artifact@v3
-        with:
-          name: docs
-          path: pdfs
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install pandoc and TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex
+
+      - name: Generate combined PDF
+        run: |
+          cd docs
+          pandoc pages/*.md -o user-guide.pdf --toc --metadata title="User Guide" --pdf-engine=xelatex
+
+      - name: Commit PDF to repository
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/user-guide.pdf
+          git commit -m "📄 Auto-generate user-guide.pdf" || echo "No changes to commit"
+          git push
