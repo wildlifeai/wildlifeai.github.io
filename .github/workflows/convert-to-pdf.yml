@@ -14,11 +14,11 @@ on:
 
 jobs:
   converttopdf:
-    name: Markdown to PDF
+    name: Build PDF
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: BaileyJM02/markdown-to-pdf@v1.2.0
+      - uses: baileyJM02/markdown-to-pdf@v1
         with:
           input_dir: docs
           output_dir: pdfs
