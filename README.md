@@ -12,4 +12,3 @@ Equipped with on-camera machine learning models, motion detection and night visi
 [![4. Setup the WW500](https://img.shields.io/badge/4.%20Setup%20the%20device-8A2BE2)](_documentation/4_setup_the_device.md)
 [![5. Start a deployment](https://img.shields.io/badge/5.%20Start%20a%20deployment-8A2BE2)](_documentation/5_start_a_deployment.md)
 [![6. Image processing](https://img.shields.io/badge/6.%20Image%20processing-8A2BE2)](_documentation/6_image_processing.md)
-
