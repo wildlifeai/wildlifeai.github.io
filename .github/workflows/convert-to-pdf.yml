@@ -23,11 +23,11 @@ jobs:
 
       - name: Convert Markdown to PDF (ignoring images)
         run: |
-          pandoc docs/*.md \
+            pandoc docs/*.md \
             --lua-filter=ignore-images.lua \
             --pdf-engine=xelatex \
             --toc \
-            -o user-guide.pdf
+            -o docs/user-guide.pdf
 
       - name: Commit PDF to repository
         run: |
