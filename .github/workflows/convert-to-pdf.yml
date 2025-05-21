@@ -1,7 +1,8 @@
 # .github/workflows/convert-to-pdf.yml
 
-name: Docs to PDF
+name: docs-to-pdf
 # This workflow is triggered on pushes to the repository.
+run-name: ${{ github.actor }} is building a PDF 🚀
 on:
   push:
     branches:
@@ -17,6 +18,9 @@ jobs:
     name: Build PDF
     runs-on: ubuntu-latest
     steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - uses: actions/checkout@v3
       - uses: baileyJM02/markdown-to-pdf@v1
         with:
