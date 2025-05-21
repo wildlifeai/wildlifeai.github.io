@@ -1,6 +1,10 @@
-# Getting Started with Wildlife Watcher
+---
+title: Welcome
+---
 
-## Introduction
+## Welcome to the User Guide for Wildlife Watcher
+
+### Introduction
 
 The Smart AI Camera for Wildlife Monitoring is designed to capture high-quality images and videos of wildlife in their natural habitat. 
 
