@@ -24,7 +24,8 @@ jobs:
       - name: Generate combined PDF
         run: |
           cd docs
-          pandoc pages/*.md -o user-guide.pdf --toc --metadata title="User Guide" --pdf-engine=xelatex
+          pandoc pages/*.md -o user-guide.pdf --toc --metadata title="User Guide" --pdf-engine=xelatex --no-fetch-remote-resources
+
 
       - name: Commit PDF to repository
         run: |
