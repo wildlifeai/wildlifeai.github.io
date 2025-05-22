@@ -1,6 +1,11 @@
-# 6. Image processing
+# Wildlife Watcher User Guide
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/6_image_processing.pdf)
+From [wildlife.ai](https://wildlife.ai/)  
+For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project  
+
+## Image processing
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/wildlife_watcher_user_guide_image_processing.pdf)
 
 1. **Image processing**
     - Wildlife Insights image processing tool is recommended for image processing
