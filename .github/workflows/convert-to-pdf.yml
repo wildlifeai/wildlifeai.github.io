@@ -26,7 +26,7 @@ jobs:
           for file in docs/pages/*.md; do
             filename=$(basename "$file" .md)
             pandoc "$file" \
-              --lua-filter=ignore-images.lua \
+              --lua-filter=.pandoc/ignore-images.lua \
               --pdf-engine=xelatex \
               --toc \
               -o "docs/pages/${filename}.pdf"
