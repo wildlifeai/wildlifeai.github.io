@@ -1,5 +1,7 @@
 # 3. Setup external tools
 
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](3_setup_extenal_tool.pdf)
+
 ## Data Science tools
 
 1. **Wildlife insights account**

@@ -1,5 +1,7 @@
 # 4. Setup the device
 
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](4_setup_the_device.pdf)
+
 ## 1. Powering the Camera
 
 - **Battery Pack Mode**: Ensure the internal battery is fully charged using the USB charging cable.
