@@ -1,8 +1,14 @@
-# 3. Setup external tools
+# Wildlife Watcher User Guide
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/3_setup_extenal_tool.pdf)
+From [wildlife.ai](https://wildlife.ai/)  
+For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project
 
-## Data Science tools
+## Setup external tools
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/wildlife_watcher_user_guide_setup_extenal_tool.pdf)
+
+### Data Science tools
+
 
 1. **Wildlife insights account**
     - Wildlife Insights tool is recommended for image processing and machine learning models management
@@ -10,15 +16,17 @@
         - Create project
 2. **AddaxAI account**
 3. **Edge Impulse**
+
 - View available models
 - Add model to project
 - Train model
 - Download model
 
-## Communication tools
+### Communication tools
 
 1. **Trap NZ account**
+
 - Trap NZ comms tool is recommended for real time notifications from machine learning models and LoRaWAN comms
-    - Create an account
-    - Create project
-    - Connect to a device
+  - Create an account
+  - Create project
+  - Connect to a device

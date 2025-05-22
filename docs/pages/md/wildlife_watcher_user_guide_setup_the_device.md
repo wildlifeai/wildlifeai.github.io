@@ -1,14 +1,19 @@
-# 4. Setup the device
+# Wildlife Watcher User Guide
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/4_setup_the_device.pdf)
+From [wildlife.ai](https://wildlife.ai/)  
+For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project
 
-## 1. Powering the Camera
+## Setup the device
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/wildlife_watcher_user_guide_setup_the_device.pdf)
+
+### 1. Powering the Camera
 
 - **Battery Pack Mode**: Ensure the internal battery is fully charged using the USB charging cable.
 - **AA Batteries Mode**: Ensure that you use high quality powerful, lasting AA batteries for the camera to stay active for the desired number of days. (e.g. … battery will last x number of days)
 - **Solar Mode:** If using the optional solar panel, connect it to the camera and place it in a well-lit area
 
-## 2. Camera Setup
+### 2. Camera Setup
 
 - Connect camera to a power source
     - Insert AA batteries
@@ -28,7 +33,7 @@
     - Open the SD card slot
     - Enter the SD card
 
-## **3. Camera add-ons**
+### **3. Camera add-ons**
 
 - Optionally user can connect another camera to the camera trap if the goal is to take high resolution photos
 - Users need to:
@@ -37,7 +42,7 @@
 
 Check if the camera is working by following the steps in ‘Camera testing’ section (How to test an additional camera?)
 
-# **4. Mounting the Camera**
+### **4. Mounting the Camera**
 
 - Choose a strategic location with a clear view of the area to be monitored.
     - Camera pointing to the ground

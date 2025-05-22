@@ -14,7 +14,7 @@ Eveything is inside `docs/` folder.
 ### Structure
 
 - Main page is `index.md`
-- Other pages are inside `docs/pages/md` folder
+- Other pages are inside `docs/pages/md/` folder
 - Images are inside `docs/images/` folder
 
 ### Workflow
@@ -29,7 +29,7 @@ During that Github action (current processing time 90s):
 - we install `pandoc` and `TeX`
 - create a `LaTeX` file per markdown file
 - convert to `PDF`
-- push it to the repository in `docs/pages/`
+- push it to the repository in `docs/pages/pdf/`
 
 #### Manipulate images and buttons
 

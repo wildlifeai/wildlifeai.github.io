@@ -1,8 +1,13 @@
-# 5. Start a deployment
+# Wildlife Watcher User Guide
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/5_start_a_deployment.pdf)
+From [wildlife.ai](https://wildlife.ai/)  
+For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project
 
-## **1. Camera Deployments via the App**
+## Start a deployment
+
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/wildlife_watcher_user_guide_start_a_deployment.pdf)
+
+### **1. Camera Deployments via the App**
 
 - The camera can be operated and configured through the companion app. Users need to:
     - Download the app - see Connecting to the App section
@@ -52,6 +57,6 @@
             Taking a picture of the camera itself and further describing the location
             
 
-## **2. End the deployment**
+### **2. End the deployment**
 
 by clicking the 'End Deployment' button and selecting the deployment to be terminated.
