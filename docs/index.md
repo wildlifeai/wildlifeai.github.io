@@ -6,13 +6,18 @@ title: Welcome
 
 ### Introduction
 
-The Smart AI Camera for Wildlife Monitoring is designed to capture high-quality images and videos of wildlife in their natural habitat. 
+The Smart AI Camera for Wildlife Monitoring is designed to capture high-quality images and videos of wildlife in their natural habitat.  
 
 Equipped with on-camera machine learning models, motion detection and night vision, this camera ensures seamless monitoring with minimal human intervention.
 
-[1. Package Container](pages/1_package_container.md)
-[2. Setup mobile application](pages/2_setup_mobile_app.md)
-[3. Setup external tool](pages/3_setup_extenal_tool.md)
-[4. Setup the device](pages/4_setup_the_device.md)
-[5. Start a deployment](pages/5_start_a_deployment.md)
-[6. Image processing](pages/6_image_processing.md)
+### [1. Package Container](pages/1_package_container.md)
+
+### [2. Setup mobile application](pages/2_setup_mobile_app.md)
+
+### [3. Setup external tool](pages/3_setup_extenal_tool.md)
+
+### [4. Setup the device](pages/4_setup_the_device.md)
+
+### [5. Start a deployment](pages/5_start_a_deployment.md)
+
+### [6. Image processing](pages/6_image_processing.md)

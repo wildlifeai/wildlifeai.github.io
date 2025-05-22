@@ -21,18 +21,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex
 
-      - name: Convert Markdown to PDF (ignoring images)
+      - name: Generate one PDF per Markdown file
         run: |
-            pandoc docs/*.md \
-            --lua-filter=ignore-images.lua \
-            --pdf-engine=xelatex \
-            --toc \
-            -o docs/user-guide.pdf
+          for file in docs/pages/*.md; do
+            filename=$(basename "$file" .md)
+            pandoc "$file" \
+              --lua-filter=ignore-images.lua \
+              --pdf-engine=xelatex \
+              --toc \
+              -o "docs/pages/${filename}.pdf"
+          done
 
-      - name: Commit PDF to repository
+
+      - name: Commit generated PDFs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add docs/user-guide.pdf
-          git commit -m "📄 Auto-generate user-guide.pdf" || echo "No changes to commit"
+          git add docs/pages/*.pdf
+          git commit -m "📄 Auto-generate per-page PDFs" || echo "🤖 No PDF changes to commit"
           git push
