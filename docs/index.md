@@ -37,7 +37,7 @@ For further assistance, visit our ([wildlife.ai](https://wildlife.ai/)) website 
 ## Tests
 
 <p>
-  <a href="pages/md/wildlife_watcher_user_guide_image_processing.md" style="
+  <a href="pages/md/wildlife_watcher_user_guide_image_processing" style="
     display: inline-block;
     padding: 10px 16px;
     background-color: #2e6da4;
