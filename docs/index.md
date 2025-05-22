@@ -33,3 +33,17 @@ Equipped with on-camera machine learning models, motion detection and night visi
 ## Customer Support
 
 For further assistance, visit our ([wildlife.ai](https://wildlife.ai/)) website or contact our support team at <support@wildlife.ai>.
+
+## Tests
+
+<p>
+  <a href="pages/md/wildlife_watcher_user_guide_image_processing.md" style="
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #2e6da4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: sans-serif;
+  ">6. Image processing</a>
+</p>
