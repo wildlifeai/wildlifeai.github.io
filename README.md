@@ -15,7 +15,12 @@ Eveything is inside `docs/` folder.
 
 - Main page is `index.md`
 - Other pages are inside `docs/pages/md/` folder
-- Images are inside `docs/images/` folder
+- Images are inside `docs/images/` folder  
+
+Because of automation the order of files are made in the main page.  
+Names of other pages are matching the name of the PDF we would like the user to have as  `wildlife_watcher_user_guide_` + `name of the guide`.  
+
+The Table of Content is automatically generated while the markdown file is converted to a pdf.
 
 ### Workflow
 
