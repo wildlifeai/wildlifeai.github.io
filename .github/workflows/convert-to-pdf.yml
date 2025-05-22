@@ -23,13 +23,13 @@ jobs:
 
       - name: Generate one PDF per Markdown file
         run: |
-          for file in docs/pages/*.md; do
+          for file in docs/pages/md/*.md; do
             filename=$(basename "$file" .md)
             pandoc "$file" \
               --lua-filter=.pandoc/ignore-images.lua \
               --pdf-engine=xelatex \
               --toc \
-              -o "docs/pages/${filename}.pdf"
+              -o "docs/pages/pdf/${filename}.pdf"
           done
 
 
@@ -37,6 +37,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add docs/pages/*.pdf
+          git add docs/pages/pdf/*.pdf
           git commit -m "📄 Auto-generate per-page PDFs" || echo "🤖 No PDF changes to commit"
           git push

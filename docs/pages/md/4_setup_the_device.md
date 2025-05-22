@@ -1,6 +1,6 @@
 # 4. Setup the device
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](4_setup_the_device.pdf)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/4_setup_the_device.pdf)
 
 ## 1. Powering the Camera
 

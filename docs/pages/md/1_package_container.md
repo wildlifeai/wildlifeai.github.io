@@ -1,7 +1,7 @@
 
 # 1. Package Container
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](1_package_container.pdf)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/1_package_container.pdf)
 
 - Smart AI camera unit
 - Stand and a mounting bracket

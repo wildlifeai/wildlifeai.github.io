@@ -1,6 +1,6 @@
 # 5. Start a deployment
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](5_start_a_deployment.pdf)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/5_start_a_deployment.pdf)
 
 ## **1. Camera Deployments via the App**
 

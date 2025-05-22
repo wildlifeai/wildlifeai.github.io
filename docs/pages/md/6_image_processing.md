@@ -1,6 +1,6 @@
 # 6. Image processing
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](6_image_processing.pdf)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/6_image_processing.pdf)
 
 1. **Image processing**
     - Wildlife Insights image processing tool is recommended for image processing

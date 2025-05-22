@@ -1,6 +1,6 @@
 # 2. Setup Mobile Application
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](2_setup_mobile_app.pdf)
+[![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/2_setup_mobile_app.pdf)
 
 
 1. **Connecting to the App**
