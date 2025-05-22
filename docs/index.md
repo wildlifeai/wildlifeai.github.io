@@ -10,40 +10,37 @@ Equipped with on-camera machine learning models, motion detection and night visi
 
 ## User guides
 
-### [1. Package Container](pages/md/wildlife_watcher_user_guide_package_container.md)
+<style>
+.button-nav {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #2e6da4;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+</style>
 
-### [2. Setup mobile application](pages/md/wildlife_watcher_user_guide_setup_mobile_app.md)
-
-### [3. Setup external tool](pages/md/wildlife_watcher_user_guide_setup_extenal_tool.md)
-
-### [4. Setup the device](pages/md/wildlife_watcher_user_guide_setup_the_device.md)
-
-### [5. Start a deployment](pages/md/wildlife_watcher_user_guide_start_a_deployment.md)
-
-### [6. Image processing](pages/md/wildlife_watcher_user_guide_image_processing.md)
+<p>
+  <a href="pages/md/wildlife_watcher_user_guide_package_container" class="button-nav">Package Container</a>
+  <a href="pages/md/pages/md/wildlife_watcher_user_guide_setup_mobile_app" class="button-nav">Setup Mobile Application</a>
+  <a href="pages/md/wildlife_watcher_user_guide_setup_extenal_tool" class="button-nav">Setup external tools</a>
+  <a href="pages/md/wildlife_watcher_user_guide_setup_the_device" class="button-nav">Setup the devicer</a>
+  <a href="pages/md/wildlife_watcher_user_guide_start_a_deployment" class="button-nav">Start deployment</a>
+  <a href="pages/md/wildlife_watcher_user_guide_image_processing" class="button-nav">Image processing</a>
+</p>
 
 ## Documentation
 
-### [Technical Specification](misc/device_spec.md)
+<p>
+  <a href="misc/device_spec.md" class="button-nav">Technical Specification</a>
+  <a href="misc/maintenance.md" class="button-nav">Maintenance and Troubleshooting</a>
+  <a href="misc/safety_legal.md" class="button-nav">Safety and legal considerations</a>
+</p>
 
-### [Maintenance and Troubleshooting](misc/maintenance.md)
-
-### [Safety and legal considerations](misc/safety_legal.md)
 
 ## Customer Support
 
 For further assistance, visit our ([wildlife.ai](https://wildlife.ai/)) website or contact our support team at <support@wildlife.ai>.
 
-## Tests
-
-<p>
-  <a href="pages/md/wildlife_watcher_user_guide_image_processing" style="
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: #2e6da4;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-family: sans-serif;
-  ">6. Image processing</a>
-</p>
