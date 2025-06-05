@@ -25,23 +25,25 @@ They are following the CamTrap DP [format](https://camtrap-dp.tdwg.org/).
 #### General structure
 
 They have the following structure:  
-.  
+\begin{verbatim}
+.
 ├── datapackage.json  
 ├── deployments.csv  
 ├── media  
-│   ├── 20210531082538-RCNX0031.JPG  
-│   ├── 20210531082538-RCNX0032.JPG  
-│   ├── 20210531082539-RCNX0033.JPG  
-│   ├── 20210531082539-RCNX0034.JPG  
-│   ├── 20210531082539-RCNX0035.JPG  
-│   ├── 20210531082540-RCNX0036.JPG  
-│   ├── 20210531082540-RCNX0037.JPG  
-│   ├── 20210531082540-RCNX0038.JPG  
-│   ├── 20210531082540-RCNX0039.JPG  
-│   ├── 20210531082541-RCNX0040.JPG  
-│   └── temp-folder  
+│   ├── 20210531082538-RCNX0031.JPG  
+│   ├── 20210531082538-RCNX0032.JPG  
+│   ├── 20210531082539-RCNX0033.JPG  
+│   ├── 20210531082539-RCNX0034.JPG  
+│   ├── 20210531082539-RCNX0035.JPG  
+│   ├── 20210531082540-RCNX0036.JPG  
+│   ├── 20210531082540-RCNX0037.JPG  
+│   ├── 20210531082540-RCNX0038.JPG  
+│   ├── 20210531082540-RCNX0039.JPG  
+│   ├── 20210531082541-RCNX0040.JPG  
+│   └── temp-folder  
 ├── media.csv  
-└── observations.csv  
+└── observations.csv
+\end{verbatim}
 
 #### datapackage.json
 

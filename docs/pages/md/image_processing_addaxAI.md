@@ -3,7 +3,7 @@
 From [wildlife.ai](https://wildlife.ai/)  
 For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project  
 
-# AddaxAI for MVP1
+# AddaxAI for wildlife.ai
 
 [![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/image_processing_addaxAI.pdf)
 
@@ -21,6 +21,7 @@ I recorded 5 images. Extract them from the SD cards and checked the EXIF informa
 ### WW500 deployment folder structure
 
 They have the following structure:  
+\begin{verbatim}
 .  
 └── images  
     ├── image_0001_2025-01-02.jpg  
@@ -28,6 +29,7 @@ They have the following structure:
     ├── image_0003_2025-01-02.jpg  
     ├── image_0004_2025-01-02.jpg  
     └── image_0005_2025-01-02.jpg  
+\end{verbatim}
 
 #### Example of image and exif information in it
 
