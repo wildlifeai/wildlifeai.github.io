@@ -1,0 +1,6 @@
+animal
+person
+vehicle
+animal
+person
+vehicle

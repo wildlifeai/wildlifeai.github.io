@@ -13,14 +13,11 @@ For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project
 
 #### Wildlife insight
 
-- Wildlife Insights tool is recommended for image processing and machine learning models management
-  - Create an account
-  - Create project
+Wildlife Insights is recommended for image processing and machine learning models management.  
 
 #### AddaxAI account
 
-- Optimize the usage of CampTrap formatted datasets
-- Get annotations and reports done automatically
+AddaxAI is optimizing the usage of CampTrap formatted datasets while doing image processing. You can get annotations and reports done automatically.  
 
 #### Edge Impulse
 

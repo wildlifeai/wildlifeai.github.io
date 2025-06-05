@@ -11,8 +11,14 @@ For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project
 
 ### 1. Download and install the mobile application
 
+You can find the mobile application on Google Play or AppStore.  
+
 ### 2. Create a account or log in
 
 #### Create an account
 
+You can create an account on wildlife watcher.  
+
 #### Log In
+
+After creating an account, you can log in.  

@@ -1,0 +1,14 @@
+<annotation>
+  <folder>images</folder>
+  <filename>image_0001_2025-01-02.jpg</filename>
+  <path>C:\Users\Deva\Desktop\Wildlifeai\Deployment_0001\images\image_0001_2025-01-02.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>640</width>
+    <height>480</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>
