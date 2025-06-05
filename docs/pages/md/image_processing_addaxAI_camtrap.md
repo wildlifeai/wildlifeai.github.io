@@ -213,7 +213,7 @@ bird|img|10
 
 absolute_path|relative_path|data_type|label|confidence|human_verified|bbox_left|bbox_top|bbox_right|bbox_bottom|file_height|file_width|DateTimeOriginal|DateTime|DateTimeDigitized|Latitude|Longitude|GPSLink|Altitude|Make|Model|Flash|ExifOffset|ResolutionUnit|YCbCrPositioning|XResolution|YResolution|ExifVersion|ComponentsConfiguration|FlashPixVersion|ColorSpace|ExifImageWidth|ISOSpeedRatings|ExifImageHeight|ExposureMode|WhiteBalance|SceneCaptureType|ExposureTime|Software|Sharpness|Saturation|ReferenceBlackWhite|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|C:/Users/Deva/Desktop/Wildlifeai/annotation testing/tdwg camtrap-dp 1.0.1 addaxAI|media\20210531082538-RCNX0031.JPG|img|bird|0.8889568112790585|False|745|893|1400|1303|1440|2048|11/04/21 20:43:09|11/04/21 20:43:09|11/04/21 20:43:09|NA|NA|NA|NA|RECONYX|"HYPERFIRE 2 COVERT"|25|300|2|2|72.0|72.0|b'0220'|b'\x01\x02\x03\x00'|b'0100'|1|2048|1600|1440|0|1|3|0.03333333333333333|NA|NA|NA|NA
+|C:/Users/Deva/Desktop/Wildlifeai/annotation testing/tdwg camtrap-dp 1.0.1 addaxAI|media\20210531082538-RCNX0031.JPG|img|bird|0.8889568112790585|False|745|893|1400|1303|1440|2048|11/04/21 20:43:09|11/04/21 20:43:09|11/04/21 20:43:09|NA|NA|NA|NA|RECONYX|"HYPERFIRE 2 COVERT"|25|300|2|2|72.0|72.0|b'0220'|b'\x01\x02\x03\x00'|b'0100'|1|2048|1600|1440|0|1|3|0.03333333333333333|NA|NA|NA|NA  
 
 #### Example of `graphs/activity-patterns/hour-of-day/combined.png`
 

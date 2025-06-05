@@ -66,6 +66,7 @@ Here I selected the destination folder as `Deployment_0001/addaxAI_results`, a f
 
 #### Result folder structure
 
+\begin{verbatim}
 .  
 ├── graphs  
 │   ├── maps  
@@ -81,6 +82,7 @@ Here I selected the destination folder as `Deployment_0001/addaxAI_results`, a f
 ├── results_detections.csv  
 ├── results_files.csv  
 └── results_summary.csv  
+\end{verbatim}
 
 In [`results_summary.csv`](#content-of-results_summarycsv) you'll find a summary of the detections as a CSV file.  
 
@@ -122,7 +124,7 @@ In `graph` you'll find some charts about the analysis.
 
 | absolute_path                                           | relative_path             | data_type | label  | confidence | human_verified | bbox_left | bbox_top | bbox_right | bbox_bottom | file_height | file_width | DateTimeOriginal | DateTime | DateTimeDigitized | Latitude           | Longitude          | GPSLink                                                          | Altitude | Make | Model | Flash | ExifOffset | ResolutionUnit | YCbCrPositioning | XResolution | YResolution | ExifVersion | ComponentsConfiguration | FlashPixVersion | ColorSpace | ExifImageWidth | ISOSpeedRatings | ExifImageHeight | ExposureMode | WhiteBalance | SceneCaptureType | ExposureTime | Software | Sharpness | Saturation | ReferenceBlackWhite |
 | ------------------------------------------------------- | ------------------------- | --------- | ------ | ---------- | -------------- | --------- | -------- | ---------- | ----------- | ----------- | ---------- | ---------------- | -------- | ----------------- | ------------------ | ------------------ | ---------------------------------------------------------------- | -------- | ---- | ----- | ----- | ---------- | -------------- | ---------------- | ----------- | ----------- | ----------- | ----------------------- | --------------- | ---------- | -------------- | --------------- | --------------- | ------------ | ------------ | ---------------- | ------------ | -------- | --------- | ---------- | ------------------- |
-| C:/Users/Deva/Desktop/Wildlifeai/Deployment_0001/images | image_0001_2025-01-02.jpg | img       | person | 0.557      | False          | 0         | 0        | 639        | 480         | 480         | 640        | NA               | NA       | NA                | -39.35379972222222 | 174.43829972222224 | https://maps.google.com/?q=-39.35379972222222,174.43829972222224 | NA       | NA   | NA    | NA    | 314        | 2              | 1                | 72.0        | 72.0        | b'0231'     | b'\\x01\\x02\\x03\\x00' | b'0100'         | 1          | 640            | NA              | 480             | NA           | NA           | NA               | NA           | NA       | NA        | NA         | NA                  |
+| C:/Users/Deva/Desktop/Wildlifeai/Deployment_0001/images | image_0001_2025-01-02.jpg | img       | person | 0.557      | False          | 0         | 0        | 639        | 480         | 480         | 640        | NA               | NA       | NA                | -39.35379972222222 | 174.43829972222224 | https://maps.google.com/?q=-39.35379972222222,174.43829972222224 | NA       | NA   | NA    | NA    | 314        | 2              | 1                | 72.0        | 72.0        | b'0231'     | b'x01x02x03x00' | b'0100'         | 1          | 640            | NA              | 480             | NA           | NA           | NA               | NA           | NA       | NA        | NA         | NA                  |
 
 #### Example of `graphs/maps/`
 
