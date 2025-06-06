@@ -20,14 +20,8 @@ jobs:
       - name: Install Jekyll
         run: gem install jekyll
 
-      # - name: Build Jekyll site
-      #   run: jekyll build
-
-      - name: Build with official Jekyll Pages action
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: .
-          destination: ./_site
+      - name: Build Jekyll site
+        run: jekyll build
 
       - name: Debug Jekyll build output
         run: |
@@ -52,21 +46,21 @@ jobs:
       - name: Convert built HTML to PDFs
         run: |
           mkdir -p docs/pages/pdf
-          echo "🔍 Looking for HTML files in _site/docs/pages/md/*/index.html"
-          for html in _site/docs/pages/md/*/index.html; do
+          echo "🔍 Looking for HTML files in _site/docs/pages/md/*.html"
+          shopt -s nullglob
+          for html in _site/docs/pages/md/*.html _site/docs/pages/md/*/*.html; do
             if [ -f "$html" ]; then
-              dir="$(dirname "$html")"
-              page="$(basename "$dir")"
-              output="docs/pages/pdf/${page}.pdf"
+              filename=$(basename "$html" .html)
+              output="docs/pages/pdf/${filename}.pdf"
               echo "📄 Found: $html"
               echo "📤 Converting $html → $output"
-              wkhtmltopdf --enable-local-file-access "$html" "$output" && echo "✅ Created $output" || echo "❌ Failed to create $output"
-            else
-              echo "⚠️ No HTML files found in expected location."
+              wkhtmltopdf --enable-local-file-access "$html" "$output" \
+                && echo "✅ Created $output" || echo "❌ Failed to create $output"
             fi
           done
           echo "📁 Listing PDF output directory:"
           ls -lh docs/pages/pdf || echo "📂 docs/pages/pdf not found"
+
       
       - name: wkhtmltopdf smoke test
         run: |
