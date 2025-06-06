@@ -20,8 +20,14 @@ jobs:
       - name: Install Jekyll
         run: gem install jekyll
 
-      - name: Build Jekyll site
-        run: jekyll build
+      # - name: Build Jekyll site
+      #   run: jekyll build
+
+      - name: Build with official Jekyll Pages action
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
 
       - name: Debug Jekyll build output
         run: |
