@@ -23,6 +23,16 @@ jobs:
       - name: Build Jekyll site
         run: jekyll build
 
+      - name: Debug Jekyll build output
+        run: |
+          echo "📦 Contents of _site/docs/pages/md/"
+          find _site/docs/pages/md
+
+      - name: 🔍 Check if HTML files exist
+        run: |
+          echo "Looking in _site/docs/pages/md/*/index.html"
+          find _site/docs/pages/md -name "index.html"
+
       - name: Install wkhtmltopdf
         run: |
           sudo apt-get update
