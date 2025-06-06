@@ -35,9 +35,9 @@ jobs:
 
       - name: 📄 Convert built HTML to PDFs
         run: |
+          ls -a -R _site/
           mkdir -p docs/pages/pdf
           echo "🔍 Searching for .html files under _site/pages/md"
-          ls -R _site/pages/md
           find _site/pages/md -name '*.html' | while read -r html; do
             filename=$(basename "$html" .html)
             output="docs/pages/pdf/${filename}.pdf"
