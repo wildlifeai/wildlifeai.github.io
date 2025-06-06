@@ -1,42 +1,51 @@
-name: docs-to-pdf
+name: Generate PDFs from Jekyll HTML
 
 on:
   push:
-    branches: [ "main" ]
-    paths:
-      - 'docs/**/*.md'
-      - '.github/workflows/convert-to-pdf.yml'
+    branches: [main] # Change if your default branch is different
 
 jobs:
-  build-pdf:
-    name: Build & Commit PDF
+  generate-pdfs:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install pandoc and TeX
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Install Bundler and Jekyll
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Install wkhtmltopdf
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex
+          sudo apt-get install -y wkhtmltopdf
 
-      - name: Generate one PDF per Markdown file
+      - name: Clean old PDFs
         run: |
-          for file in docs/pages/md/*.md; do
-            filename=$(basename "$file" .md)
-            pandoc "$file" \
-              --lua-filter=.pandoc/ignore-images.lua \
-              --pdf-engine=xelatex \
-              --toc \
-              -o "docs/pages/pdf/${filename}.pdf"
+          mkdir -p docs/pages/pdf
+          rm -f docs/pages/pdf/*.pdf
+
+      - name: Convert built HTML to PDFs
+        run: |
+          for html in _site/docs/pages/md/*/index.html; do
+            page=$(basename $(dirname "$html"))
+            wkhtmltopdf --enable-local-file-access "$html" "docs/pages/pdf/${page}.pdf"
           done
 
-
-      - name: Commit generated PDFs
+      - name: Commit and push generated PDFs
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add docs/pages/pdf/*.pdf
-          git commit -m "📄 Auto-generate per-page PDFs" || echo "🤖 No PDF changes to commit"
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/pages/pdf
+          git commit -m "Update PDFs from built HTML [skip ci]" || echo "No changes to commit"
+          git push origin main
