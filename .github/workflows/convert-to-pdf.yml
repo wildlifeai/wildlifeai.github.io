@@ -35,8 +35,12 @@ jobs:
 
       - name: Convert built HTML to PDFs
         run: |
+          mkdir -p docs/pages/pdf
+          shopt -s nullglob
           for html in _site/docs/pages/md/*/index.html; do
-            page=$(basename $(dirname "$html"))
+            dir="$(dirname "$html")"
+            page="$(basename "$dir")"
+            echo "Converting $html → docs/pages/pdf/${page}.pdf"
             wkhtmltopdf --enable-local-file-access "$html" "docs/pages/pdf/${page}.pdf"
           done
 
