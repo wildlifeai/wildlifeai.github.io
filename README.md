@@ -23,9 +23,9 @@ We created a [website](https://wildlifeai.github.io/wildlife-watcher-user-guide/
 Eveything deployed on the website is inside `docs/` folder.  
 
 - Index page is `docs/index.md`
-- Main pages are inside `docs/pages/md/`
-- Other pages are inside `docs/misc/`
-- Automated generated pdf files are inside `docs/pages/pdf/`
+- Main pages are inside `docs/_pages/md/`
+- Other pages are inside `docs/_pages/misc/`
+- Automated generated pdf files are inside `docs/_pages/pdf/`
 - Images are inside `docs/images/`
 
 ## 3. Workflow
@@ -45,7 +45,7 @@ Eveything deployed on the website is inside `docs/` folder.
 
 We are using Jekyll for converting the `.md` into `.html` files.  
 In the `index.md` we used css and html links to create buttons.  
-We do point to an extension-free file (as `pages/md/wildlife_watcher_user_guide_package_container` instead of `pages/md/wildlife_watcher_user_guide_package_container.md`) to make sure the button will point to the html file instead of the markdown file.  
+We do point to an extension-free file (as `_pages/md/wildlife_watcher_user_guide_package_container` instead of `_page_s/md/wildlife_watcher_user_guide_package_container.md`) to make sure the button will point to the html file instead of the markdown file.  
 
 ### Automation
 
@@ -65,7 +65,7 @@ During that Github action (current processing time 90s):
 - we install `pandoc` and `TeX`
 - create a `LaTeX` file per markdown file
 - convert to `PDF`
-- push it to the repository in `docs/pages/pdf/`
+- push it to the repository in `docs/_pages/pdf/`
 
 ## 4. Manipulate images and buttons
 
