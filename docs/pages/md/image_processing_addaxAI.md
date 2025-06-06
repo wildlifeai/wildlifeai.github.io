@@ -3,7 +3,10 @@
 From [wildlife.ai](https://wildlife.ai/)  
 For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project  
 
-# AddaxAI for wildlife.ai
+---
+
+AddaxAI for wildlife.ai
+---
 
 [![Download PDF](https://img.shields.io/badge/Download-PDF-blue)](../pdf/image_processing_addaxAI.pdf)
 
