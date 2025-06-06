@@ -36,9 +36,8 @@ jobs:
       - name: 📄 Convert built HTML to PDFs
         run: |
           mkdir -p docs/pages/pdf
-          echo "🔍 Converting _site/docs/pages/md/**/*.html files"
-          shopt -s globstar nullglob
-          for html in _site/docs/pages/md/**/*.html; do
+          echo "🔍 Searching for .html files under _site/docs/pages/md"
+          find _site/docs/pages/md -name '*.html' | while read -r html; do
             filename=$(basename "$html" .html)
             output="docs/pages/pdf/${filename}.pdf"
             echo "📤 Converting $html → $output"
@@ -48,11 +47,11 @@ jobs:
           echo "📁 Output folder contents:"
           ls -lh docs/pages/pdf
 
-      - name: 🧪 wkhtmltopdf sanity test
-        run: |
-          echo "<html><body><h1>Hello from GH Actions</h1></body></html>" > test.html
-          wkhtmltopdf test.html docs/pages/pdf/test.pdf
-          ls -lh docs/pages/pdf
+      # - name: 🧪 wkhtmltopdf sanity test
+      #   run: |
+      #     echo "<html><body><h1>Hello from GH Actions</h1></body></html>" > test.html
+      #     wkhtmltopdf test.html docs/pages/pdf/test.pdf
+      #     ls -lh docs/pages/pdf
 
       - name: 🧾 Git status before commit
         run: |
