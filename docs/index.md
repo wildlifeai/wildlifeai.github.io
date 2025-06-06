@@ -35,9 +35,9 @@ Equipped with on-camera machine learning models, motion detection and night visi
 ## Documentation
 
 <p>
-  <a href="misc/device_spec" class="button-nav">Technical Specification</a>
-  <a href="misc/maintenance" class="button-nav">Maintenance and Troubleshooting</a>
-  <a href="misc/safety_legal" class="button-nav">Safety and legal considerations</a>
+  <a href="pages/md/misc/device_spec" class="button-nav">Technical Specification</a>
+  <a href="pages/md/misc/maintenance" class="button-nav">Maintenance and Troubleshooting</a>
+  <a href="pages/md/misc/safety_legal" class="button-nav">Safety and legal considerations</a>
 </p>
 
 ## Customer Support

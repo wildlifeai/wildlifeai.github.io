@@ -40,6 +40,6 @@ Wildlife Insights user guide.
 </style>
 
 <p>
-  <a href="pages/md/image_processing_addaxAI" class="button-nav">AddaxAI user guide</a>
-  <a href="pages/md/image_processing_addaxAI_camptrap" class="button-nav">AddaxAI user guide with CamTrap Dataset</a>
+  <a href="image_processing_addaxAI" class="button-nav">AddaxAI user guide</a>
+  <a href="image_processing_addaxAI_camtrap.md" class="button-nav">AddaxAI user guide with CamTrap Dataset</a>
 </p>
