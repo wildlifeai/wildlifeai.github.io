@@ -47,6 +47,7 @@ jobs:
         run: |
           mkdir -p docs/pages/pdf
           echo "🔍 Looking for HTML files in _site/docs/pages/md/*.html"
+          ls -a _site/docs/pages/md/
           shopt -s nullglob
           for html in _site/docs/pages/md/*.html _site/docs/pages/md/*/*.html; do
             if [ -f "$html" ]; then
