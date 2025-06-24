@@ -1,4 +1,4 @@
-name: Convert Markdown to PDF
+name: Convert Markdown to PDF (Robust)
 
 on:
   push:
@@ -12,20 +12,38 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🔍 Debug - Check repository structure
+      - name: 🔍 Find markdown files and determine paths
+        id: find_files
         run: |
-          echo "=== Repository root contents ==="
-          ls -la
-          echo -e "\n=== Looking for markdown files ==="
+          echo "=== Looking for markdown files ==="
           find . -name "*.md" -o -name "*.markdown" | head -20
-          echo -e "\n=== Check docs directory ==="
-          ls -la docs/ || echo "docs/ directory doesn't exist"
-          echo -e "\n=== Check pages directory ==="
-          ls -la docs/pages/ || echo "docs/pages/ directory doesn't exist"
-          echo -e "\n=== Count of .md files in different locations ==="
-          find . -name "*.md" | wc -l
-          find docs/ -name "*.md" 2>/dev/null | wc -l || echo "No docs/ directory"
-          find docs/pages/ -name "*.md" 2>/dev/null | wc -l || echo "No docs/pages/ directory"
+          
+          # Find the actual location of markdown files
+          MD_DIR=""
+          if [ -d "docs/pages/md" ] && [ "$(find docs/pages/md -name '*.md' | wc -l)" -gt 0 ]; then
+              MD_DIR="docs/pages/md"
+          elif [ -d "docs/pages" ] && [ "$(find docs/pages -name '*.md' | wc -l)" -gt 0 ]; then
+              MD_DIR="docs/pages"
+          elif [ -d "docs" ] && [ "$(find docs -name '*.md' | wc -l)" -gt 0 ]; then
+              MD_DIR="docs"
+          else
+              echo "Searching entire repository for .md files..."
+              MD_FILES=$(find . -name "*.md" -not -path "./.git/*" | head -1)
+              if [ -n "$MD_FILES" ]; then
+                  MD_DIR=$(dirname "$MD_FILES" | sed 's|^\./||')
+              fi
+          fi
+          
+          echo "MD_DIR=$MD_DIR" >> $GITHUB_OUTPUT
+          echo "Found markdown directory: $MD_DIR"
+          
+          if [ -n "$MD_DIR" ]; then
+              echo "Files in $MD_DIR:"
+              find "$MD_DIR" -name "*.md" | head -10
+          else
+              echo "❌ No markdown files found!"
+              exit 1
+          fi
 
       - name: 🧹 Create PDF directory
         run: |
@@ -33,20 +51,45 @@ jobs:
           rm -f docs/pages/pdf/*.pdf
 
       - name: 📄 Convert Markdown to PDF
+        if: steps.find_files.outputs.MD_DIR != ''
         uses: BaileyJM02/markdown-to-pdf@v1
         with:
-          input_path: docs/pages/md  # Use input_path instead of input_dir
+          input_path: ${{ steps.find_files.outputs.MD_DIR }}
           output_dir: docs/pages/pdf
-          images_dir: docs/images  # Directory containing any images referenced in markdown
+          images_dir: docs/images
           build_html: false
           build_pdf: true
 
-      - name: 📋 List generated PDFs
+      - name: 🔍 Find where PDFs actually went (comprehensive search)
         run: |
-          echo "Generated PDF files:"
+          echo "=== Comprehensive PDF search ==="
+          find . -name "*.pdf" -type f 2>/dev/null | while read pdf; do
+              echo "Found PDF: $pdf ($(du -h "$pdf" | cut -f1))"
+          done
+          
+          echo -e "\n=== Check expected output directory ==="
+          if [ -d "docs/pages/pdf" ]; then
+              ls -lah docs/pages/pdf/
+          else
+              echo "docs/pages/pdf directory doesn't exist"
+          fi
+          
+          echo -e "\n=== Check if PDFs are in input directory ==="
+          if [ -n "${{ steps.find_files.outputs.MD_DIR }}" ]; then
+              ls -lah "${{ steps.find_files.outputs.MD_DIR }}" | grep pdf || echo "No PDFs in input directory"
+          fi
+
+      - name: 📋 Move PDFs if they're in wrong location
+        run: |
+          # Find all PDFs and move them to the correct location
+          find . -name "*.pdf" -not -path "./docs/pages/pdf/*" -type f | while read pdf; do
+              echo "Moving $pdf to docs/pages/pdf/"
+              mv "$pdf" "docs/pages/pdf/"
+          done
+          
+          echo "Final PDF directory contents:"
           ls -lah docs/pages/pdf/
-          echo -e "\nPDF count:"
-          find docs/pages/pdf -name "*.pdf" | wc -l
+          echo "PDF count: $(find docs/pages/pdf -name '*.pdf' | wc -l)"
 
       - name: 🚀 Commit and push PDFs
         run: |
@@ -62,7 +105,9 @@ jobs:
             else
               git commit -m "Generate PDFs from markdown files [skip ci]"
               git push origin main
+              echo "✅ PDFs committed and pushed successfully"
             fi
           else
-            echo "No PDF files found to commit"
+            echo "❌ No PDF files found to commit"
+            exit 1
           fi
