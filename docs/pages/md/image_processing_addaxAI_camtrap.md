@@ -1,4 +1,4 @@
-![Alt text](../../images/wildlife-ai-logo.png)
+![Alt text](docs/images/wildlife-ai-logo.png)
 
 From [wildlife.ai](https://wildlife.ai/)  
 For [Wildlife Watcher](https://wildlife.ai/projects/wildlife-watcher/) project  
@@ -86,7 +86,7 @@ Table with media files (images/videos) recorded during deployments (deploymentID
 
 ##### Example of an image
 
-![Alt text](../../images/CamTrap_dataset/media/20210531082538-RCNX0031.JPG "Example of image")
+![Alt text](docs/images/CamTrap_dataset/media/20210531082538-RCNX0032.JPG "Example of image")
 
 #### observations.csv
 
