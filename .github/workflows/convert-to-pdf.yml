@@ -20,33 +20,33 @@ jobs:
           find . -name "*.md" -o -name "*.markdown" | head -20
           echo -e "\n=== Check docs directory ==="
           ls -la docs/ || echo "docs/ directory doesn't exist"
-          echo -e "\n=== Check _pages directory ==="
-          ls -la docs/_pages/ || echo "docs/_pages/ directory doesn't exist"
+          echo -e "\n=== Check pages directory ==="
+          ls -la docs/pages/ || echo "docs/pages/ directory doesn't exist"
           echo -e "\n=== Count of .md files in different locations ==="
           find . -name "*.md" | wc -l
           find docs/ -name "*.md" 2>/dev/null | wc -l || echo "No docs/ directory"
-          find docs/_pages/ -name "*.md" 2>/dev/null | wc -l || echo "No docs/_pages/ directory"
+          find docs/pages/ -name "*.md" 2>/dev/null | wc -l || echo "No docs/pages/ directory"
 
       - name: 🧹 Create PDF directory
         run: |
-          mkdir -p docs/_pages/pdf
-          rm -f docs/_pages/pdf/*.pdf
+          mkdir -p docs/pages/pdf
+          rm -f docs/pages/pdf/*.pdf
 
       - name: 📄 Convert Markdown to PDF
         uses: BaileyJM02/markdown-to-pdf@v1
         with:
-          input_path: docs/_pages  # Use input_path instead of input_dir
-          output_dir: docs/_pages/pdf
-          images_dir: docs/_pages  # Directory containing any images referenced in markdown
+          input_path: docs/pages/md  # Use input_path instead of input_dir
+          output_dir: docs/pages/pdf
+          images_dir: docs/images  # Directory containing any images referenced in markdown
           build_html: false
           build_pdf: true
 
       - name: 📋 List generated PDFs
         run: |
           echo "Generated PDF files:"
-          ls -lah docs/_pages/pdf/
+          ls -lah docs/pages/pdf/
           echo -e "\nPDF count:"
-          find docs/_pages/pdf -name "*.pdf" | wc -l
+          find docs/pages/pdf -name "*.pdf" | wc -l
 
       - name: 🚀 Commit and push PDFs
         run: |
@@ -54,8 +54,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           # Check if we have any PDFs to commit
-          if ls docs/_pages/pdf/*.pdf 1> /dev/null 2>&1; then
-            git add docs/_pages/pdf/*.pdf
+          if ls docs/pages/pdf/*.pdf 1> /dev/null 2>&1; then
+            git add docs/pages/pdf/*.pdf
             git status
             if git diff --staged --quiet; then
               echo "No changes to commit"
