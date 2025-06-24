@@ -38,6 +38,7 @@ jobs:
           input_path: docs/pages/md/  # Use input_path instead of input_dir
           output_dir: docs/pages/pdf/
           images_dir: docs/images/  # Directory containing any images referenced in markdown
+          image_import: docs/images  # This should match the path prefix used in your markdown files          
           build_html: false
           build_pdf: true
 
