@@ -24,7 +24,7 @@ Equipped with on-camera machine learning models, motion detection and night visi
 </style>
 
 <p>
-  <a href="pages/md/wildlife_watcher_user_guide_package_container.md" class="button-nav">Package Container</a>
+  <a href="pages/md/wildlife_watcher_user_guide_package_container" class="button-nav">Package Container</a>
   <a href="pages/md/wildlife_watcher_user_guide_setup_mobile_app" class="button-nav">Setup Mobile Application</a>
   <a href="pages/md/wildlife_watcher_user_guide_setup_extenal_tool" class="button-nav">Setup external tools</a>
   <a href="pages/md/wildlife_watcher_user_guide_setup_the_device" class="button-nav">Setup the device</a>

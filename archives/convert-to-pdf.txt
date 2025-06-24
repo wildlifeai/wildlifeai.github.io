@@ -1,0 +1,71 @@
+name: Generate PDFs from Jekyll HTML
+
+on:
+  push:
+    branches: [main] # Adjust if your main branch is named differently
+
+jobs:
+  generate-pdfs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 💎 Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: 🔧 Install Jekyll
+        run: gem install jekyll
+
+      - name: 🛠️ Build Jekyll site
+        run: jekyll build
+
+      - name: 📦 Install wkhtmltopdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf
+
+      - name: 🧹 Clean old PDFs
+        run: |
+          mkdir -p docs/_pages/pdf
+          rm -f docs/_pages/pdf/*.pdf
+
+      - name: 📄 Convert built HTML to PDFs
+        run: |
+          ls -a -R _site/
+          mkdir -p docs/_pages/pdf
+          echo "🔍 Searching for .html files under _site/_pages/md"
+          find _site/_pages/md -name '*.html' | while read -r html; do
+            filename=$(basename "$html" .html)
+            output="docs/_pages/pdf/${filename}.pdf"
+            echo "📤 Converting $html → $output"
+            wkhtmltopdf --enable-local-file-access "$html" "$output" \
+              && echo "✅ Created $output" || echo "❌ Failed to create $output"
+          done
+          echo "📁 Output folder contents:"
+          ls -lh docs/_pages/pdf
+
+
+
+      # - name: 🧪 wkhtmltopdf sanity test
+      #   run: |
+      #     echo "<html><body><h1>Hello from GH Actions</h1></body></html>" > test.html
+      #     wkhtmltopdf test.html docs/pages/pdf/test.pdf
+      #     ls -lh docs/pages/pdf
+
+      - name: 🧾 Git status before commit
+        run: |
+          git status
+          find docs/_pages/pdf -type f
+
+      - name: 🚀 Commit and push generated PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/_pages/pdf/*.pdf || true
+          git status
+          git commit -m "Update PDFs from built HTML [skip ci]" || echo "🟡 No changes to commit"
+          git push origin main || echo "🟠 Push skipped (maybe no new PDFs)"
