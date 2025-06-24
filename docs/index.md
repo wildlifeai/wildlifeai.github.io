@@ -24,20 +24,20 @@ Equipped with on-camera machine learning models, motion detection and night visi
 </style>
 
 <p>
-  <a href="/_pages/md/wildlife_watcher_user_guide_package_container.md" class="button-nav">Package Container</a>
-  <a href="_pages/md/wildlife_watcher_user_guide_setup_mobile_app" class="button-nav">Setup Mobile Application</a>
-  <a href="_pages/md/wildlife_watcher_user_guide_setup_extenal_tool" class="button-nav">Setup external tools</a>
-  <a href="_pages/md/wildlife_watcher_user_guide_setup_the_device" class="button-nav">Setup the device</a>
-  <a href="_pages/md/wildlife_watcher_user_guide_start_a_deployment" class="button-nav">Start deployment</a>
-  <a href="_pages/md/wildlife_watcher_user_guide_image_processing" class="button-nav">Image processing</a>
+  <a href="pages/md/wildlife_watcher_user_guide_package_container.md" class="button-nav">Package Container</a>
+  <a href="pages/md/wildlife_watcher_user_guide_setup_mobile_app" class="button-nav">Setup Mobile Application</a>
+  <a href="pages/md/wildlife_watcher_user_guide_setup_extenal_tool" class="button-nav">Setup external tools</a>
+  <a href="pages/md/wildlife_watcher_user_guide_setup_the_device" class="button-nav">Setup the device</a>
+  <a href="pages/md/wildlife_watcher_user_guide_start_a_deployment" class="button-nav">Start deployment</a>
+  <a href="pages/md/wildlife_watcher_user_guide_image_processing" class="button-nav">Image processing</a>
 </p>
 
 ## Documentation
 
 <p>
-  <a href="_pages/md/misc/device_spec" class="button-nav">Technical Specification</a>
-  <a href="_pages/md/misc/maintenance" class="button-nav">Maintenance and Troubleshooting</a>
-  <a href="_pages/md/misc/safety_legal" class="button-nav">Safety and legal considerations</a>
+  <a href="pages/md/misc/device_spec" class="button-nav">Technical Specification</a>
+  <a href="pages/md/misc/maintenance" class="button-nav">Maintenance and Troubleshooting</a>
+  <a href="pages/md/misc/safety_legal" class="button-nav">Safety and legal considerations</a>
 </p>
 
 ## Customer Support
